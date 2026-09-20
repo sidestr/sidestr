@@ -1,0 +1,25 @@
+{
+  "name": "sidestr",
+  "version": "0.0.1",
+  "description": "the sidestr client as one package: open a chain by its id, validate every block yourself, spend, peg in and out, use the EVM — in Node or a page",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "repository": "github:sidestr/sidestr",
+  "homepage": "https://sidestr.com",
+  "exports": { ".": { "browser": "./browser.mjs", "default": "./index.mjs" } },
+  "files": ["index.mjs", "browser.mjs", "README.md", "LICENSE", "examples"],
+  "scripts": { "test": "node test/package-test.mjs" },
+  "dependencies": {
+    "@bitcoin-desktop/schema": "github:bitcoin-desktop/schema#v0.0.27",
+    "@sidestr/spec": "github:sidestr/spec#000dec33a9509a06f01079be1214e40e64cfd83c",
+    "@sidestr/explorer": "github:sidestr/explorer#e990baf274e9521b0af4638f150b63d2015b5d21",
+    "@sidestr/wallet": "github:sidestr/wallet#bccbd2dfbdf44b3e21b812ee2fa07771b3434a87"
+  },
+  "optionalDependencies": {
+    "@ethereumjs/block": "10.1.3",
+    "@ethereumjs/common": "10.1.3",
+    "@ethereumjs/tx": "10.1.3",
+    "@ethereumjs/util": "10.1.3",
+    "@ethereumjs/vm": "10.1.3"
+  }
+}
