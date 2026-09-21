@@ -1,6 +1,6 @@
 {
   "name": "sidestr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "the sidestr client as one package: open a chain by its id, validate every block yourself, spend, peg in and out, use the EVM \u2014 in Node or a page",
   "type": "module",
   "license": "AGPL-3.0-or-later",
