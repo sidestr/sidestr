@@ -25,8 +25,8 @@
   "dependencies": {
     "@bitcoin-desktop/schema": "github:bitcoin-desktop/schema#v0.0.27",
     "@sidestr/spec": "github:sidestr/spec#dbae14bfeab51f9a9f8c8a616616bfc1b35cc402",
-    "@sidestr/explorer": "github:sidestr/explorer#24fe348f102a6ac10a44071a267a6b284fff7cad",
-    "@sidestr/wallet": "github:sidestr/wallet#2a0dbeab984b77b9cb368a1422650e252cbf1fce"
+    "@sidestr/explorer": "github:sidestr/explorer#66f54ae349fb6c96feb00b4e1d0a7b646c2d7510",
+    "@sidestr/wallet": "github:sidestr/wallet#078faf760e99e87a83be99585b95029f54978d78"
   },
   "optionalDependencies": {
     "@ethereumjs/block": "10.1.3",
