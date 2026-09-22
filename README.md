@@ -26,3 +26,20 @@ This package is thin. It installs the [spec](https://github.com/sidestr/spec) (t
 ## Licence
 
 AGPL-3.0-or-later.
+
+## Command line
+
+`npx sidestr` (or `sidestr` once installed) is a thin command over the same library: every command is a wallet call plus formatting, and nothing is fetched at run time beyond the mirror and the relays.
+
+```
+sidestr info --chain sidestr:melchain                      the chain, its tip, the mirror judged against the announcement
+sidestr whoami --key-file ~/.sidestr/me.key                 pubkey, address, did:nostr
+sidestr balance | coins | history [addr]                    of the key's address, or of addr (no key needed)
+sidestr tx <txid>                                           the block it was mined in
+sidestr send <to> <amount> [--fee N] [--yes] [--wait]       prints the plan; --yes broadcasts; --wait blocks until mined
+sidestr data <text> [--hex] [--yes] [--wait]                an OP_RETURN spend, change to self
+sidestr publish <hex>                                       broadcast a signed transaction
+sidestr faucet [--wait]                                     ask a faucet on the relays
+```
+
+The key comes from `--key-file`, `$SIDESTR_KEY_FILE`, `$SIDESTR_KEY`, or as a last resort `git config nostr.privkey` (plaintext, so warned about); never from an argument. `--chain` finds the mirror from the signer's announcement and remembers it; `--mirror` pins one. Read commands need no key, so an agent can be allowed them permanently and asked before each spend. `--json` for machines; exit 0 ok, 1 error, 2 not enough funds. Validated state is cached in `~/.cache/sidestr`, so a later run checks only the blocks since; `--no-cache` validates from genesis.
