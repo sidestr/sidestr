@@ -47,10 +47,10 @@ The key comes from `--key-file`, `$SIDESTR_KEY_FILE`, `$SIDESTR_KEY`, or as a la
 
 ## A paywall in one file
 
-`examples/paywall.mjs` is a service that trusts nothing but the chain: it validates tally itself, watches its own address, and opens one route to whoever paid it 0.01 SHELL and signs the payment's txid with the key that paid. No account, no oracle, no state beyond the chain, a key file it makes itself.
+`examples/paywall/paywall.mjs` is a service that trusts nothing but the chain: it validates tally itself, watches its own address, and opens one route to whoever paid it 0.01 SHELL and signs the payment's txid with the key that paid. No account, no oracle, no state beyond the chain, a key file it makes itself.
 
 ```
-node examples/paywall.mjs --chain sidestr:tally --port 8402      prints its address and balance
+node examples/paywall/paywall.mjs --chain sidestr:tally --port 8402      prints its address and balance
 sidestr sign <txid> --key-file <the key that paid>              -> pub and sig
 curl "http://127.0.0.1:8402/text?txid=<txid>&pub=<pub>&sig=<sig>"
 ```

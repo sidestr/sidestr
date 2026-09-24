@@ -3,13 +3,13 @@
 // one route to whoever paid it 0.01 SHELL and can sign the payment's txid with the key that paid.
 // Ephemeral by design: no dependency beyond this package, no state beyond the chain, a key file it makes itself.
 //
-//   node examples/paywall.mjs [--chain sidestr:tally] [--port 8402] [--key-file paywall.key] [--asset SHELL] [--price 0.01]
+//   node examples/paywall/paywall.mjs [--chain sidestr:tally] [--port 8402] [--key-file paywall.key] [--asset SHELL] [--price 0.01]
 //
 // pay:  send 0.01 SHELL to the address it prints (the tally page's Assets → Send does it), note the txid
 // sign: sidestr sign <txid> --key-file <the key that paid>          -> { pub, sig }
 // ask:  curl "http://127.0.0.1:8402/text?txid=<txid>&pub=<pub>&sig=<sig>"
 import { createServer } from 'node:http'; import { readFileSync, writeFileSync, existsSync } from 'node:fs'; import { randomBytes } from 'node:crypto';
-import { openWallet } from '../index.mjs';
+import { openWallet } from '../../index.mjs';
 const argv = process.argv.slice(2); const flag = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
 const chain = flag('chain', 'sidestr:tally'), port = Number(flag('port', 8402)), keyFile = flag('key-file', 'paywall.key'), ticker = flag('asset', 'SHELL'), priceText = flag('price', '0.01');
 if (!existsSync(keyFile)) writeFileSync(keyFile, randomBytes(32).toString('hex'), { mode: 0o600 }); const key = readFileSync(keyFile, 'utf8').trim();
