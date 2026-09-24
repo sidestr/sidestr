@@ -28,9 +28,27 @@ function check({ txid, pub, sig }) {
   if (!w.secp.verifySchnorr(w.ex.hash.hexToBytes(txid), w.ex.hash.hexToBytes(sig), w.ex.hash.hexToBytes(pub))) return 'the signature over the txid does not verify';
   if (paid.has(txid)) return 'that payment was already used'; paid.add(txid); return null;
 }
+// the front page: status, and a form that signs the txid in the browser with a pasted key (the key never leaves the page)
+const LIB = 'https://cdn.jsdelivr.net/gh/sidestr/spec@373d3eb6accd163f418e8a813052f1516a942bb3/siding/lib', CDN = 'https://cdn.jsdelivr.net/gh/bitcoin-desktop/schema@v0.0.27';
+const page = ({ b }) => `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>paywall · ${chain}</title>
+<style>body{font:15px/1.5 -apple-system,Inter,Segoe UI,sans-serif;background:#0b0d12;color:#eef1f7;max-width:640px;margin:2rem auto;padding:0 1rem}.mono{font-family:ui-monospace,Menlo,monospace;font-size:.85rem;word-break:break-all}.mut{color:#8b93a7}input{width:100%;font:inherit;background:#1d2331;color:#eef1f7;border:1px solid #262d3d;border-radius:10px;padding:.6rem .7rem;margin:.3rem 0 .8rem}button{font:inherit;font-weight:600;background:#7c5cff;color:#fff;border:0;border-radius:10px;padding:.7rem 1.1rem;cursor:pointer}#out{margin-top:1rem;padding:1rem;border:1px solid #262d3d;border-radius:12px;background:#151923;white-space:pre-wrap}.good{color:#34d399}.bad{color:#f87171}</style>
+<h1 style="font-size:1.3rem">a paywall on ${chain}</h1>
+<p class="mut">${fmt(price)} ${ticker} per view. Pay the address below from the tally page (Assets → Send), then sign the payment's txid here with the key that paid. The key is used in this page only and never sent.</p>
+<div>address <div class="mono">${me.address}</div></div>
+<p class="mut">block ${w.tip.height} · balance ${b.sats.toLocaleString('en-US')} sats · ${fmt(b.held)} ${ticker} received · ${paid.size} view(s) served</p>
+<label>txid of your payment<input id="txid" class="mono" autocomplete="off" placeholder="64 hex characters"></label>
+<label>the key that paid (64 hex characters)<input id="key" type="password" autocomplete="off"></label>
+<button id="go">sign and open</button><div id="out" class="mut">nothing yet</div>
+<script type="module">
+import { makeSigner } from '${LIB}/schnorr.mjs'; const hash = await import('${CDN}/codec/hash.js'); const secp = await import('${CDN}/codec/secp256k1.js'); const signer = makeSigner({ hash, secp });
+const out = document.getElementById('out'); document.getElementById('go').onclick = async () => { const txid = document.getElementById('txid').value.trim().toLowerCase(), key = document.getElementById('key').value.trim().toLowerCase();
+  try { if (!/^[0-9a-f]{64}$/.test(txid)) throw new Error('the txid is 64 hex characters'); if (!/^[0-9a-f]{64}$/.test(key)) throw new Error('the key is 64 hex characters'); const pub = signer.pubkeyOf(key); const sig = hash.bytesToHex(signer.schnorrSign(hash.hexToBytes(txid), key));
+    out.className = 'mut'; out.textContent = 'signed as ' + pub.slice(0, 12) + '…, asking…'; const r = await fetch('/text?txid=' + txid + '&pub=' + pub + '&sig=' + sig); const t = await r.text(); out.className = r.ok ? 'good' : 'bad'; out.textContent = t; } catch (e) { out.className = 'bad'; out.textContent = e.message; } };
+</script>`;
 const TEXT = 'The paywall opened. This paragraph cost 0.01 SHELL on tally, verified by a node that validates every block itself, with no account and no oracle: the payment is on the chain, and the request was signed by the key that paid.\n';
 createServer(async (req, res) => { const u = new URL(req.url, 'http://x'); const out = (code, body, type = 'text/plain') => { res.writeHead(code, { 'content-type': type + '; charset=utf-8' }); res.end(body); };
-  if (u.pathname === '/') { await w.refresh().catch(() => {}); const b = balance(); return out(200, `paywall on ${chain} at block ${w.tip.height}\naddress ${me.address}\nprice ${fmt(price)} ${ticker} per view · signed by the key that paid\nbalance ${b.sats.toLocaleString('en-US')} sats · ${fmt(b.held)} ${ticker} received · ${paid.size} view(s) served\nGET /text?txid=&pub=&sig=\n`); }
+  if (u.pathname === '/status') { await w.refresh().catch(() => {}); const b = balance(); return out(200, `paywall on ${chain} at block ${w.tip.height}\naddress ${me.address}\nprice ${fmt(price)} ${ticker} per view · signed by the key that paid\nbalance ${b.sats.toLocaleString('en-US')} sats · ${fmt(b.held)} ${ticker} received · ${paid.size} view(s) served\nGET /text?txid=&pub=&sig=\n`); }
+  if (u.pathname === '/') { await w.refresh().catch(() => {}); const b = balance(); return out(200, page({ b }), 'text/html'); }
   if (u.pathname === '/text') { await w.refresh().catch(() => {}); const why = check({ txid: u.searchParams.get('txid'), pub: u.searchParams.get('pub'), sig: u.searchParams.get('sig') }); return why ? out(402, why + '\n') : out(200, TEXT); }
   out(404, 'not here\n'); }).listen(port, '127.0.0.1', () => { const b = balance(); console.log(`paywall on ${chain} · address ${me.address} · price ${fmt(price)} ${ticker} · balance ${b.sats} sats, ${fmt(b.held)} ${ticker} · http://127.0.0.1:${port}/`); });
 setInterval(async () => { try { await w.refresh(); const b = balance(); console.log(`${new Date().toTimeString().slice(0, 8)} block ${w.tip.height} · ${b.sats} sats · ${fmt(b.held)} ${ticker} · ${paid.size} view(s)`); } catch {} }, 60000);
