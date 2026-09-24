@@ -40,6 +40,19 @@ sidestr send <to> <amount> [--fee N] [--yes] [--wait]       prints the plan; --y
 sidestr data <text> [--hex] [--yes] [--wait]                an OP_RETURN spend, change to self
 sidestr publish <hex>                                       broadcast a signed transaction
 sidestr faucet [--wait]                                     ask a faucet on the relays
+sidestr sign <hex32>                                        Schnorr-sign a 32-byte message (a txid) with the key
 ```
 
 The key comes from `--key-file`, `$SIDESTR_KEY_FILE`, `$SIDESTR_KEY`, or as a last resort `git config nostr.privkey` (plaintext, so warned about); never from an argument. `--chain` finds the mirror from the signer's announcement and remembers it; `--mirror` pins one. Read commands need no key, so an agent can be allowed them permanently and asked before each spend. `--json` for machines; exit 0 ok, 1 error, 2 not enough funds. Validated state is cached in `~/.cache/sidestr`, so a later run checks only the blocks since; `--no-cache` validates from genesis.
+
+## A paywall in one file
+
+`examples/paywall.mjs` is a service that trusts nothing but the chain: it validates tally itself, watches its own address, and opens one route to whoever paid it 0.01 SHELL and signs the payment's txid with the key that paid. No account, no oracle, no state beyond the chain, a key file it makes itself.
+
+```
+node examples/paywall.mjs --chain sidestr:tally --port 8402      prints its address and balance
+sidestr sign <txid> --key-file <the key that paid>              -> pub and sig
+curl "http://127.0.0.1:8402/text?txid=<txid>&pub=<pub>&sig=<sig>"
+```
+
+Pay it from the tally page (Assets → Send). A payment opens the door once; a replay, a payment below the price, or a signature from a key that did not fund the payment is refused with the reason.
