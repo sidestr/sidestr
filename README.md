@@ -56,3 +56,4 @@ curl "http://127.0.0.1:8402/text?txid=<txid>&pub=<pub>&sig=<sig>"
 ```
 
 Pay it from the tally page (Assets → Send). A payment opens the door once; a replay, a payment below the price, or a signature from a key that did not fund the payment is refused with the reason.
+
