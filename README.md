@@ -1,5 +1,7 @@
 # sidestr
 
+[![Mind map](https://mindstr.org/badge.svg)](https://mindstr.org/?uri=https://sidestr.com/sidestr/mindstr/index.jsonld)
+
 The sidestr client as one package. Open a chain by its id, validate every block yourself, spend, peg in and out, use the EVM. The same code runs in Node and in a page.
 
 ```

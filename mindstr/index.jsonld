@@ -1,0 +1,298 @@
+{
+  "@context": {
+    "@vocab": "https://mindstr.org/ns#",
+    "link": {
+      "@type": "@id"
+    },
+    "parent": {
+      "@type": "@id"
+    }
+  },
+  "version": "0.2",
+  "nodes": [
+    {
+      "@id": "#this",
+      "name": "sidestr",
+      "x": 0,
+      "y": 0,
+      "link": "https://github.com/sidestr/sidestr",
+      "bgColor": "#ebc573"
+    },
+    {
+      "@id": "#ab9ysn",
+      "name": "README · 4",
+      "x": 237,
+      "y": -68,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#sidestr",
+      "bgColor": "#acd5ff",
+      "parent": "#this"
+    },
+    {
+      "@id": "#qhtzie",
+      "name": "How it is put together",
+      "x": 359,
+      "y": -296,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "bgColor": "#daeeff",
+      "parent": "#ab9ysn"
+    },
+    {
+      "@id": "#2sgmjt",
+      "name": "Licence",
+      "x": 527,
+      "y": -225,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#licence",
+      "bgColor": "#daeeff",
+      "parent": "#ab9ysn"
+    },
+    {
+      "@id": "#j9h6ge",
+      "name": "Command line",
+      "x": 492,
+      "y": -76,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#command-line",
+      "bgColor": "#daeeff",
+      "parent": "#ab9ysn"
+    },
+    {
+      "@id": "#ejt2c7",
+      "name": "A paywall in one file",
+      "x": 586,
+      "y": 60,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#a-paywall-in-one-file",
+      "bgColor": "#daeeff",
+      "parent": "#ab9ysn"
+    },
+    {
+      "@id": "#tvx8v7",
+      "name": "Source · 2 files",
+      "x": 165,
+      "y": 160,
+      "link": "https://github.com/sidestr/sidestr/tree/gh-pages",
+      "bgColor": "#e9c1ef",
+      "parent": "#this"
+    },
+    {
+      "@id": "#4bfmpa",
+      "name": "browser.mjs",
+      "x": 410,
+      "y": 244,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/browser.mjs",
+      "bgColor": "#f7e4f9",
+      "parent": "#tvx8v7"
+    },
+    {
+      "@id": "#c2mpq8",
+      "name": "index.mjs · 2",
+      "x": 320,
+      "y": 421,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#f7e4f9",
+      "parent": "#tvx8v7"
+    },
+    {
+      "@id": "#yykmee",
+      "name": "paths()",
+      "x": 468,
+      "y": 498,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#f7e4f9",
+      "parent": "#c2mpq8"
+    },
+    {
+      "@id": "#7kgwkb",
+      "name": "openWallet()",
+      "x": 381,
+      "y": 636,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#f7e4f9",
+      "parent": "#c2mpq8"
+    },
+    {
+      "@id": "#x7t4w7",
+      "name": "Open issues · 3",
+      "x": -145,
+      "y": 173,
+      "link": "https://github.com/sidestr/sidestr/issues",
+      "bgColor": "#fec0b1",
+      "parent": "#this"
+    },
+    {
+      "@id": "#dsw684",
+      "name": "#4 CLI: add `pegout`",
+      "x": -20,
+      "y": 425,
+      "link": "https://github.com/sidestr/sidestr/issues/4",
+      "bgColor": "#ffe3dc",
+      "parent": "#x7t4w7"
+    },
+    {
+      "@id": "#v88t4a",
+      "name": "#3 CLI rough edges from first use (0.0…",
+      "x": -283,
+      "y": 441,
+      "link": "https://github.com/sidestr/sidestr/issues/3",
+      "bgColor": "#ffe3dc",
+      "parent": "#x7t4w7"
+    },
+    {
+      "@id": "#skzt29",
+      "name": "#1 Refactor notes from packaging (side…",
+      "x": -438,
+      "y": 205,
+      "link": "https://github.com/sidestr/sidestr/issues/1",
+      "bgColor": "#ffe3dc",
+      "parent": "#x7t4w7"
+    },
+    {
+      "@id": "#t4pwzt",
+      "name": "Examples · 2",
+      "x": -232,
+      "y": -80,
+      "link": "https://github.com/sidestr/sidestr/tree/gh-pages/examples",
+      "bgColor": "#d7d59b",
+      "parent": "#this"
+    },
+    {
+      "@id": "#jhaa84",
+      "name": "agent.mjs",
+      "x": -491,
+      "y": -80,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/agent.mjs",
+      "bgColor": "#eeedd3",
+      "parent": "#t4pwzt"
+    },
+    {
+      "@id": "#wavvy9",
+      "name": "paywall",
+      "x": -494,
+      "y": -274,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/paywall",
+      "bgColor": "#eeedd3",
+      "parent": "#t4pwzt"
+    },
+    {
+      "@id": "#i9w3v4",
+      "name": "the sidestr client as one package: open a c…",
+      "x": -25,
+      "y": -211,
+      "link": "https://github.com/sidestr/sidestr",
+      "bgColor": "#ececec",
+      "parent": "#this"
+    },
+    {
+      "@id": "#e9sufn",
+      "name": "19 commits, 2026-09-20 to 2026-09-27",
+      "x": -187,
+      "y": -394,
+      "link": "https://github.com/sidestr/sidestr/commits/gh-pages",
+      "bgColor": "#ececec",
+      "parent": "#i9w3v4"
+    },
+    {
+      "@id": "#g45zx9",
+      "name": "sidestr.com",
+      "x": 0,
+      "y": -501,
+      "link": "https://sidestr.com",
+      "bgColor": "#ececec",
+      "parent": "#i9w3v4"
+    },
+    {
+      "@id": "#vz8rhu",
+      "name": "AGPL-3.0",
+      "x": 139,
+      "y": -408,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/LICENSE",
+      "bgColor": "#ececec",
+      "parent": "#i9w3v4"
+    }
+  ],
+  "connections": [
+    {
+      "start": 0,
+      "end": 1
+    },
+    {
+      "start": 1,
+      "end": 2
+    },
+    {
+      "start": 1,
+      "end": 3
+    },
+    {
+      "start": 1,
+      "end": 4
+    },
+    {
+      "start": 1,
+      "end": 5
+    },
+    {
+      "start": 0,
+      "end": 6
+    },
+    {
+      "start": 6,
+      "end": 7
+    },
+    {
+      "start": 6,
+      "end": 8
+    },
+    {
+      "start": 8,
+      "end": 9
+    },
+    {
+      "start": 8,
+      "end": 10
+    },
+    {
+      "start": 0,
+      "end": 11
+    },
+    {
+      "start": 11,
+      "end": 12
+    },
+    {
+      "start": 11,
+      "end": 13
+    },
+    {
+      "start": 11,
+      "end": 14
+    },
+    {
+      "start": 0,
+      "end": 15
+    },
+    {
+      "start": 15,
+      "end": 16
+    },
+    {
+      "start": 15,
+      "end": 17
+    },
+    {
+      "start": 0,
+      "end": 18
+    },
+    {
+      "start": 18,
+      "end": 19
+    },
+    {
+      "start": 18,
+      "end": 20
+    },
+    {
+      "start": 18,
+      "end": 21
+    }
+  ],
+  "selectedNode": 0
+}
