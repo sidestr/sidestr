@@ -20,192 +20,219 @@
     },
     {
       "@id": "#ab9ysn",
-      "name": "README",
-      "x": 231,
-      "y": -81,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#sidestr",
+      "name": "Live site",
+      "x": 209,
+      "y": -82,
+      "link": "https://sidestr.com",
       "bgColor": "#acd5ff",
       "parent": "#this"
     },
     {
       "@id": "#qhtzie",
-      "name": "How it is put together",
-      "x": 351,
-      "y": -303,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "name": "The sidestr client as one package. Open a chain by its…",
+      "x": 330,
+      "y": -236,
+      "link": "https://sidestr.com",
       "bgColor": "#daeeff",
       "parent": "#ab9ysn"
     },
     {
       "@id": "#2sgmjt",
-      "name": "Licence",
-      "x": 514,
-      "y": -247,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#licence",
+      "name": "sidestr.com",
+      "x": 405,
+      "y": -122,
+      "link": "https://sidestr.com",
       "bgColor": "#daeeff",
       "parent": "#ab9ysn"
     },
     {
       "@id": "#j9h6ge",
-      "name": "Command line",
-      "x": 484,
-      "y": -107,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#command-line",
-      "bgColor": "#daeeff",
+      "name": "since Sep 2026 · last 27 Sep 2026",
+      "x": 429,
+      "y": -28,
+      "link": "https://github.com/sidestr/sidestr/commits/gh-pages",
+      "bgColor": "#ececec",
       "parent": "#ab9ysn"
     },
     {
       "@id": "#ejt2c7",
-      "name": "A paywall in one file",
-      "x": 590,
-      "y": 10,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#a-paywall-in-one-file",
-      "bgColor": "#daeeff",
-      "parent": "#ab9ysn"
+      "name": "How it is put together",
+      "x": 147,
+      "y": 150,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "bgColor": "#d9c6fb",
+      "parent": "#this"
     },
     {
       "@id": "#tvx8v7",
-      "name": "CLI · 11 commands ›",
-      "x": 193,
-      "y": 135,
-      "link": "./cli.jsonld",
-      "bgColor": "#e0c4f6",
-      "parent": "#this"
+      "name": "This package is thin",
+      "x": 396,
+      "y": 143,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "bgColor": "#efe6ff",
+      "parent": "#ejt2c7"
     },
     {
       "@id": "#4bfmpa",
-      "name": "Source · 2 files",
-      "x": 10,
-      "y": 212,
-      "link": "https://github.com/sidestr/sidestr/tree/gh-pages",
-      "bgColor": "#febdc6",
-      "parent": "#this"
+      "name": "It installs the spec (the consensus library and…",
+      "x": 316,
+      "y": 248,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "bgColor": "#efe6ff",
+      "parent": "#ejt2c7"
     },
     {
       "@id": "#c2mpq8",
-      "name": "browser.mjs",
-      "x": 129,
-      "y": 411,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/browser.mjs",
-      "bgColor": "#ffe2e6",
-      "parent": "#4bfmpa"
+      "name": "In a page, browser.mjs re-exports the wallet from…",
+      "x": 149,
+      "y": 343,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together",
+      "bgColor": "#efe6ff",
+      "parent": "#ejt2c7"
     },
     {
       "@id": "#yykmee",
-      "name": "index.mjs · 2",
-      "x": -54,
-      "y": 499,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
-      "bgColor": "#ffe2e6",
-      "parent": "#4bfmpa"
-    },
-    {
-      "@id": "#7kgwkb",
-      "name": "paths()",
-      "x": 0,
-      "y": 637,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
-      "bgColor": "#ffe2e6",
-      "parent": "#yykmee"
-    },
-    {
-      "@id": "#x7t4w7",
-      "name": "openWallet()",
-      "x": -155,
-      "y": 702,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
-      "bgColor": "#ffe2e6",
-      "parent": "#yykmee"
-    },
-    {
-      "@id": "#dsw684",
-      "name": "Open issues · 3",
-      "x": -231,
-      "y": 81,
-      "link": "https://github.com/sidestr/sidestr/issues",
-      "bgColor": "#f1c99c",
+      "name": "CLI · 11 commands ›",
+      "x": -70,
+      "y": 186,
+      "link": "./cli.jsonld",
+      "bgColor": "#f9bdd5",
       "parent": "#this"
     },
     {
+      "@id": "#7kgwkb",
+      "name": "Source · 2 files",
+      "x": -185,
+      "y": 117,
+      "link": "https://github.com/sidestr/sidestr/tree/gh-pages",
+      "bgColor": "#fcc2a9",
+      "parent": "#this"
+    },
+    {
+      "@id": "#x7t4w7",
+      "name": "browser.mjs",
+      "x": -299,
+      "y": 263,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/browser.mjs",
+      "bgColor": "#ffe4d9",
+      "parent": "#7kgwkb"
+    },
+    {
+      "@id": "#dsw684",
+      "name": "index.mjs · 2",
+      "x": -368,
+      "y": 189,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#ffe4d9",
+      "parent": "#7kgwkb"
+    },
+    {
       "@id": "#v88t4a",
-      "name": "#4 CLI: add `pegout`",
-      "x": -306,
-      "y": 336,
-      "link": "https://github.com/sidestr/sidestr/issues/4",
-      "bgColor": "#fbe8d3",
+      "name": "paths()",
+      "x": -516,
+      "y": 307,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#ffe4d9",
       "parent": "#dsw684"
     },
     {
       "@id": "#skzt29",
-      "name": "#3 CLI rough edges from first use (0.0…",
-      "x": -517,
-      "y": 241,
-      "link": "https://github.com/sidestr/sidestr/issues/3",
-      "bgColor": "#fbe8d3",
+      "name": "openWallet()",
+      "x": -561,
+      "y": 244,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/index.mjs",
+      "bgColor": "#ffe4d9",
       "parent": "#dsw684"
     },
     {
       "@id": "#t4pwzt",
-      "name": "#1 Refactor notes from packaging (side…",
-      "x": -500,
-      "y": -9,
-      "link": "https://github.com/sidestr/sidestr/issues/1",
-      "bgColor": "#fbe8d3",
-      "parent": "#dsw684"
+      "name": "README",
+      "x": -230,
+      "y": 4,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#sidestr",
+      "bgColor": "#e0d199",
+      "parent": "#this"
     },
     {
       "@id": "#jhaa84",
-      "name": "Examples · 2",
-      "x": -168,
-      "y": -157,
-      "link": "https://github.com/sidestr/sidestr/tree/gh-pages/examples",
-      "bgColor": "#c1dba8",
-      "parent": "#this"
+      "name": "Command line",
+      "x": -425,
+      "y": 56,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#command-line",
+      "bgColor": "#f2ecd2",
+      "parent": "#t4pwzt"
     },
     {
       "@id": "#wavvy9",
-      "name": "agent.mjs",
-      "x": -397,
-      "y": -259,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/agent.mjs",
-      "bgColor": "#e3f0d8",
-      "parent": "#jhaa84"
+      "name": "A paywall in one file",
+      "x": -428,
+      "y": -39,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/README.md#a-paywall-in-one-file",
+      "bgColor": "#f2ecd2",
+      "parent": "#t4pwzt"
     },
     {
       "@id": "#i9w3v4",
-      "name": "paywall",
-      "x": -315,
-      "y": -424,
-      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/paywall",
-      "bgColor": "#e3f0d8",
-      "parent": "#jhaa84"
-    },
-    {
-      "@id": "#e9sufn",
-      "name": "the sidestr client as one package: open a chain by id,…",
-      "x": 26,
-      "y": -211,
-      "link": "https://github.com/sidestr/sidestr",
-      "bgColor": "#ececec",
+      "name": "Open issues · 3",
+      "x": -146,
+      "y": -151,
+      "link": "https://github.com/sidestr/sidestr/issues",
+      "bgColor": "#b1dfb5",
       "parent": "#this"
     },
     {
+      "@id": "#e9sufn",
+      "name": "#4 CLI: add `pegout`",
+      "x": -378,
+      "y": -174,
+      "link": "https://github.com/sidestr/sidestr/issues/4",
+      "bgColor": "#ddf2de",
+      "parent": "#i9w3v4"
+    },
+    {
       "@id": "#g45zx9",
-      "name": "since Sep 2026 · last 27 Sep 2026",
-      "x": -17,
-      "y": -425,
-      "link": "https://github.com/sidestr/sidestr/commits/gh-pages",
-      "bgColor": "#ececec",
-      "parent": "#e9sufn"
+      "name": "#3 CLI rough edges from first use (0.0…",
+      "x": -300,
+      "y": -262,
+      "link": "https://github.com/sidestr/sidestr/issues/3",
+      "bgColor": "#ddf2de",
+      "parent": "#i9w3v4"
     },
     {
       "@id": "#vz8rhu",
-      "name": "sidestr.com",
-      "x": 186,
-      "y": -476,
-      "link": "https://sidestr.com",
-      "bgColor": "#ececec",
-      "parent": "#e9sufn"
+      "name": "#1 Refactor notes from packaging (side…",
+      "x": -177,
+      "y": -339,
+      "link": "https://github.com/sidestr/sidestr/issues/1",
+      "bgColor": "#ddf2de",
+      "parent": "#i9w3v4"
+    },
+    {
+      "@id": "#35gtrs",
+      "name": "Examples · 2",
+      "x": 49,
+      "y": -190,
+      "link": "https://github.com/sidestr/sidestr/tree/gh-pages/examples",
+      "bgColor": "#95e1e3",
+      "parent": "#this"
+    },
+    {
+      "@id": "#fiqrfa",
+      "name": "agent.mjs",
+      "x": 43,
+      "y": -364,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/agent.mjs",
+      "bgColor": "#d1f3f4",
+      "parent": "#35gtrs"
+    },
+    {
+      "@id": "#fad69b",
+      "name": "paywall",
+      "x": 145,
+      "y": -344,
+      "link": "https://github.com/sidestr/sidestr/blob/gh-pages/examples/paywall",
+      "bgColor": "#d1f3f4",
+      "parent": "#35gtrs"
     }
   ],
   "connections": [
@@ -226,35 +253,35 @@
       "end": 4
     },
     {
-      "start": 1,
+      "start": 0,
       "end": 5
     },
     {
-      "start": 0,
+      "start": 5,
       "end": 6
     },
     {
-      "start": 0,
+      "start": 5,
       "end": 7
     },
     {
-      "start": 7,
+      "start": 5,
       "end": 8
     },
     {
-      "start": 7,
+      "start": 0,
       "end": 9
     },
     {
-      "start": 9,
+      "start": 0,
       "end": 10
     },
     {
-      "start": 9,
+      "start": 10,
       "end": 11
     },
     {
-      "start": 0,
+      "start": 10,
       "end": 12
     },
     {
@@ -266,32 +293,44 @@
       "end": 14
     },
     {
-      "start": 12,
+      "start": 0,
       "end": 15
     },
     {
-      "start": 0,
+      "start": 15,
       "end": 16
     },
     {
-      "start": 16,
+      "start": 15,
       "end": 17
     },
     {
-      "start": 16,
+      "start": 0,
       "end": 18
     },
     {
-      "start": 0,
+      "start": 18,
       "end": 19
     },
     {
-      "start": 19,
+      "start": 18,
       "end": 20
     },
     {
-      "start": 19,
+      "start": 18,
       "end": 21
+    },
+    {
+      "start": 0,
+      "end": 22
+    },
+    {
+      "start": 22,
+      "end": 23
+    },
+    {
+      "start": 22,
+      "end": 24
     }
   ],
   "selectedNode": 0

@@ -30,7 +30,7 @@
       "name": "info",
       "x": 390,
       "y": -266,
-      "bgColor": "#daeeff",
+      "bgColor": "#9addf5",
       "parent": "#ab9ysn"
     },
     {
@@ -46,7 +46,7 @@
       "name": "whoami",
       "x": 559,
       "y": -161,
-      "bgColor": "#daeeff",
+      "bgColor": "#a0dafb",
       "parent": "#ab9ysn"
     },
     {
@@ -62,7 +62,7 @@
       "name": "balance [addr]",
       "x": 500,
       "y": 3,
-      "bgColor": "#daeeff",
+      "bgColor": "#a8d7ff",
       "parent": "#ab9ysn"
     },
     {
@@ -78,7 +78,7 @@
       "name": "coins [addr]",
       "x": 557,
       "y": 166,
-      "bgColor": "#daeeff",
+      "bgColor": "#b1d4ff",
       "parent": "#ab9ysn"
     },
     {
@@ -94,7 +94,7 @@
       "name": "history [addr]",
       "x": 387,
       "y": 269,
-      "bgColor": "#daeeff",
+      "bgColor": "#bad1ff",
       "parent": "#ab9ysn"
     },
     {
@@ -110,7 +110,7 @@
       "name": "tx <txid>",
       "x": 299,
       "y": 432,
-      "bgColor": "#daeeff",
+      "bgColor": "#c4cdff",
       "parent": "#ab9ysn"
     },
     {
