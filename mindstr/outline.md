@@ -1,6 +1,6 @@
 # [sidestr](https://github.com/sidestr/sidestr)
 
-- [README · 4](https://github.com/sidestr/sidestr/blob/gh-pages/README.md#sidestr)
+- [README](https://github.com/sidestr/sidestr/blob/gh-pages/README.md#sidestr)
   - [How it is put together](https://github.com/sidestr/sidestr/blob/gh-pages/README.md#how-it-is-put-together)
   - [Licence](https://github.com/sidestr/sidestr/blob/gh-pages/README.md#licence)
   - [Command line](https://github.com/sidestr/sidestr/blob/gh-pages/README.md#command-line)
@@ -17,7 +17,6 @@
 - [Examples · 2](https://github.com/sidestr/sidestr/tree/gh-pages/examples)
   - [agent.mjs](https://github.com/sidestr/sidestr/blob/gh-pages/examples/agent.mjs)
   - [paywall](https://github.com/sidestr/sidestr/blob/gh-pages/examples/paywall)
-- [the sidestr client as one package: open a c…](https://github.com/sidestr/sidestr)
-  - [19 commits, 2026-09-20 to 2026-09-27](https://github.com/sidestr/sidestr/commits/gh-pages)
+- [the sidestr client as one package: open a chain by id,…](https://github.com/sidestr/sidestr)
+  - [since Sep 2026 · last 27 Sep 2026](https://github.com/sidestr/sidestr/commits/gh-pages)
   - [sidestr.com](https://sidestr.com)
-  - [AGPL-3.0](https://github.com/sidestr/sidestr/blob/gh-pages/LICENSE)
